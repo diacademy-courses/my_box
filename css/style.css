@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background: url(../img/fon2.png) no-repeat, url(../img/fon1.jpg);
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex_container {
+    width: 100%;
+    height: 300px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex_container .item {
+    background-color: blueviolet;
+    margin: 10px 0;
+    color: aliceblue;
+}
+
+.grid-container {
+    max-width: 960px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    grid-gap: 10px;
+    grid-auto-flow: dense;
+}
+
+.grid-container div img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item5 {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.item6 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+
+/* grid-container-area */
+
+.grid-container-area {
+    max-width: 960px;
+    margin: 50px auto;
+    display: grid;
+    grid-template-areas: "post-1 post-1 post-2" "post-1 post-1 post-3" "post-6 post-5 post-4";
+    grid-template-rows: repeat(3, 200px);
+    grid-template-columns: repeat(3, 1fr);
+}
+
+article {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+
+.post-inner {
+    margin: auto;
+    color: #555;
+    padding: 30px;
+    text-align: center;
+}
+
+.post-inner a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: lowercase;
+    display: inline-block;
+    padding: 10px 30px;
+    background: #ea7a64;
+    border: 2px solid transparent;
+    transition: .3s;
+}
+
+.post-1 {
+    display: flex;
+    background: #fff;
+    border: 10px solid #efddd0;
+    grid-area: post-1;
+}
+
+.post-2 {
+    background-image: url(https://html5book.ru/wp-content/uploads/2019/03/grid-img-3.jpg);
+    grid-area: post-2;
+}
+
+.post-3 {
+    background: #f4efe9;
+    grid-area: post-3;
+}
+
+.post-4 {
+    background-image: url(https://html5book.ru/wp-content/uploads/2019/03/grid-img-1.jpg);
+    grid-area: post-4;
+}
+
+.post-5 {
+    background: #f4efe9;
+    grid-area: post-5;
+}
+
+.post-6 {
+    background-image: url(https://html5book.ru/wp-content/uploads/2019/03/grid-img-4.jpg);
+    grid-area: post-6;
+}
